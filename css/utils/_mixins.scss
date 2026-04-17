@@ -1,0 +1,41 @@
+@mixin flexcenter($direcao){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direcao;
+}
+
+@mixin flexjustify($aling, $justify, $direcao){
+    display: flex;
+    align-items: $aling;
+    justify-content: $justify;
+    flex-direction: $direcao;
+}
+
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == ss {
+    @media (max-width: 340px) { @content; }
+  }
+
+  @if $breakpoint == sm {
+    @media (max-width: 480px) { @content; }
+  }
+
+  @if $breakpoint == md {
+    @media (max-width: 768px) { @content; }
+  }
+
+  @if $breakpoint == lg {
+    @media (max-width: 1024px) { @content; }
+  }
+
+  @if $breakpoint == xl {
+    @media (max-width: 1280px) { @content; }
+  }
+}

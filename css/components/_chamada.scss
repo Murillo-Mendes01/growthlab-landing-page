@@ -1,0 +1,75 @@
+.container-chamada{
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include flexjustify(center, center, column);
+    gap: 10px;
+    text-align: center;
+    padding: 0px 20px;
+    h1{
+        font-size: 50px;
+        line-height: 60px;
+        color: $white;
+        margin-left: 1%;
+        margin-right: 1%;
+
+        @include respond(lg) {
+            font-size: 45px;
+            line-height: 50px;
+        }
+
+        @include respond(sm) {
+            font-size: 35px;
+            line-height: 40px;
+        }
+    }
+    h2{
+        font-size: 20px;
+        margin: 20px 0px;
+        background: linear-gradient(90deg, #AFCBFF, #E6C9E8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 1%;
+        margin-right: 1%;
+        @include respond(lg){
+            font-size: 20px;
+
+            @include respond(md) {
+            padding: 0px 20px;
+        }
+        }
+    }
+
+    
+    a{
+        display: inline-block;
+        background-color: $white;
+        color: black;
+        padding: 15px 30px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.5s;
+
+         @include respond(md){
+            
+             padding: 15px 20px;
+             text-align: center;
+         }
+
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.863);
+                transition: 0.5s;
+                transform: translateY(-5px);
+
+                i{
+                    transform: translateX(5px);
+                    transition: 0.5s;
+                }
+            }        
+    }
+
+    i{
+        transition: 0.5s;
+    }
+}

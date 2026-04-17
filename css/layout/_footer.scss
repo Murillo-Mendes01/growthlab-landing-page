@@ -1,0 +1,55 @@
+footer{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+
+    @include respond(md){
+        padding-bottom: 5rem;
+    }
+    
+    
+}
+
+.container-footer{
+    width: auto;
+    padding: 0px 20px;
+    margin: 0 auto;
+    @include flexjustify(center, space-around, row);
+    gap: 10px;
+    text-align: center;
+    color: $white;
+
+    @include respond(md){
+            @include flexjustify(center, center, column);
+        }
+
+
+    .footer-direitos{
+
+        @include flexjustify(center, center, row);
+        gap: 15px;
+        flex-wrap: wrap;
+
+        @include respond(md){
+            @include flexjustify(center, center, column);
+            
+        }
+
+        
+
+        p{
+        color: $white;
+        font-size: 13px;
+        }
+
+        a{
+        text-decoration: $white;
+        cursor: pointer;
+    }
+
+    }
+
+    img{
+        width: 250px;
+        height: 200px;
+    }
+}

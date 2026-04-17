@@ -1,0 +1,43 @@
+.hero{
+    height: 90vh;
+    width: 100%;
+    padding-top: 100px;
+    gap: 40px;
+    background: linear-gradient(90deg, #2D5BBA 0%, #3F74D1 50%, #5A8DEE 100%);   
+    @include flexjustify(center, center, row);
+    padding-bottom: 7rem;
+    @include respond(md) {
+       padding: 200px 0px;
+    }   
+
+       @include respond(ss) {
+        padding: 200px 0px;
+       }
+}
+
+.sobre{
+    width: 100%;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.servicos{
+    width: 100%;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    background-color: #F5F7FA;
+}
+
+.faq{
+    width: 100%;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.chamada{
+    width: 100%;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    background: linear-gradient(90deg, #2D5BBA 0%, #3F74D1 50%, #5A8DEE 100%);
+}
+

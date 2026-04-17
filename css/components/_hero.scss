@@ -1,0 +1,87 @@
+.container-hero {
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  @include flexjustify(center, space-around, row);
+  @include respond(md) {
+    @include flexjustify(center, center, column);
+    gap: 50px;
+    margin-left: 44px;
+    margin-right: 44px;
+  }
+}
+
+//  TEXO DO HERO
+
+.hero-text {
+  padding: 0px 20px;
+  width: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+
+  @include respond(md) {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+    color: $white;
+
+    @include respond(lg) {
+      font-size: 45px;
+      line-height: 50px;
+    }
+
+    @include respond(sm) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0px;
+    background: linear-gradient(90deg, #afcbff, #e6c9e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include respond(lg) {
+      font-size: 15px;
+    }
+  }
+  span {
+    background: linear-gradient(90deg, #afcbff, #e6c9e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  a {
+    display: inline-block;
+    background-color: $white;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+
+    @include respond(md) {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.863);
+      transition: 0.5s;
+      transform: translateY(-5px);
+
+      i {
+        transform: translateX(5px);
+        transition: 0.5s;
+      }
+    }
+  }
+  i {
+    transition: 0.5s;
+  }
+}

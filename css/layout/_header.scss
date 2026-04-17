@@ -1,0 +1,45 @@
+header {
+  width: 100%;
+  position: fixed;
+  height: 80px;
+  background: rgba(59, 131, 246, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+
+  .cabecalho {
+    @include flexjustify(center, space-between, row);
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0px 20px;
+    
+
+    .logo {
+      img {
+        height: 36px;
+      }
+    }
+
+    .whatsapp {
+      span {
+        background-color: $white;
+        padding: 10px;
+        border-radius: 50%;
+        @include flexjustify(center, center, row);
+        transition: 0.5s;
+
+        &:hover {
+          background-color: #ffffffdc;
+          transition: 0.5s;
+        }
+      }
+      i {
+        font-size: 30px;
+        color: #25d366;
+        cursor: pointer;
+      }
+    }
+  }
+}

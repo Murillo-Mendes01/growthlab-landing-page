@@ -1,0 +1,102 @@
+.container-faq{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include flexjustify(center, center, column);
+    gap: 10px;
+
+    h2{
+        font-size: 35px;
+        margin: 20px 0px;
+            @include respond(sm){
+            font-size: 25px;
+        }
+    }
+
+    h5{ 
+        color: $primary; 
+            span{
+                text-align: center;
+                box-shadow: 0px 0px 10px 0px $primary;
+                background-color: #3b83f62d;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+    .containder-accordion{
+        @include flexjustify(center, center, column);
+        gap: 10px;
+        width: 500px;
+
+        @include respond(sm){
+            width: auto;
+            padding: 0px 20px;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+    }
+
+    .accordion{
+        background-color: $fundo_c;
+        border-radius: 8px;
+        padding: 12px;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+
+        &:has(.active) {
+    .arrow {
+      transform: rotate(180deg);
+    }
+    }
+
+    .accordion-header{
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        @include flexjustify(center, space-between, row);
+        font-size: 16px;
+        cursor: pointer;
+
+        @include respond(sm){
+            font-size: 12px;
+        }
+
+        span{
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    
+    }
+    .accordion-body{
+        color: $text;
+        font-size: 14px;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s;
+
+        @include respond(sm){
+            font-size: 10px;
+        }
+    }
+
+    .active{
+            height: 100%;
+            padding: 10px 0px;
+            opacity: 1;
+     }
+
+     .arrow{
+        transition: transform 0.2s linear;
+        margin-left: 10px;
+     }
+
+    
+  }
+
+
+}
